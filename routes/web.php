@@ -19,12 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::view('/dashboard', 'deal.dashboard')->name('home');
 
-Auth::routes();
+Route::view('/perfil', 'deal.perfil_user')->name('perfil_user');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::view('/perfil/2', 'deal.perfil_contractor')->name('perfil_contractor');

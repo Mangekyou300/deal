@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+
+}
+
+/* barra de manvegação */
+.th{
+    height: 8vh;
+}
+
+.nav{
+    position: fixed;
+    display: flex;
+    justify-content: left;
+    height: 8vh;
+    z-index: 99;
+}
+
+.navbar{
+    background: #000748;
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 8vh;
+    justify-content: right;
+}
+
+.img_user{
+    margin-top: 8px;
+    margin-left: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.navbar ul{
+    display: flex;
+    margin: 20px; 
+    margin-right: 40px;
+}
+
+.navbar ul li{
+    margin-left: 32px;
+}
+
+.navbar ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover{
+    opacity: 0.7;
+}
+/* end barra de manvegação */
+
+/* breadcrumbs */
+.breadcrumbs{
+    display: flex;
+    width: 100vw;
+}
+
+.breadcrumbs ul{
+   display: flex;
+   margin-left: 30px;
+   margin-top: 20px;
+}
+
+.breadcrumbs ul li{
+    margin-left: 7px;
+    margin-right: 7px;
+    font-weight: 800;
+    color: #4885FD;
+}
+
+.breadcrumbs ul li a{
+    color: #4885FD;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.breadcrumbs ul li a:hover{
+    color: rgb(173, 7, 7)
+}
+
+.bc_color_custom{
+    color: #4885FD;
+}
+
+.logo{
+    display: flex;
+    width: 100vw;
+    position: relative;
+    margin-right: 30px;
+    justify-content: right;
+}
+
+.img_logo{
+    position: absolute;
+    margin-top: 10px;
+    margin-right: 15px;
+    width: 90px;
+    height: 90px;
+}
+/* end-breadcrumbs */
+
+/* style geral */
+.main{
+    margin: 35px;
+    margin-left: 40px;
+    margin-right: 80px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main h1, h2{
+    font-weight: normal;
+}
+
+.main h2{
+    margin-top: 30px;
+}
+/* end style geral */
+
+/* carousel */
+.featured-carousel{
+    width: 90vw;
+}
+/* end carousel */
+
+/* campos do carousel */
+.vaga{
+    width: 250px;
+    height: 320px;
+    background: #E4E3FE;
+}
+
+.field{
+    margin: 10px;
+}
+
+.vaga_img{
+    display: flex;
+    justify-content: space-around;
+}
+
+.vaga_img img{
+    margin: 10px 0px 5px 0px;
+    height: 200px;
+}
+/* end campos do carousel */
+
+/* palavra chave */
+.key{
+    display: inline-block;
+    margin: 5px 0px 0px 0px;
+    padding: 0px 6px 0px 6px;
+    background: #000748;
+    border-radius: 50px;
+    color:#fff;
+    text-align: center;
+}
+/* end palavra chave */
+
+/* barra azul */
+.between{
+    background: #000748;
+    height: 5px;
+    width: 93vw;
+    border-radius: 60px;
+    margin-top: 20px;
+}
+/* end barra azul */
+
+/* inicio do perfil */
+.perfil_edit{
+    margin: 25px;
+    display: flex;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_edit{
+    margin-top: 25px;
+    margin-right: 50px;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    background: #E4E3FE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_edit i{
+    font-size: 5rem;
+}
+
+.info_edit h2{
+    margin-bottom: 0px;
+}
+
+.star_color{
+    color: rgb(241, 208, 20);
+}
+/* end inicio do perfil */
+
+/* h3 Subtitulo dos Perfis */
+.subtitle_perfil{
+    margin-bottom: -15px;
+    color: #4885FD;
+    font-weight: normal;
+}
+/* end h3 Subtitulo dos Perfis */
+
+/* organização das listas no perfil_user */
+.org_perfil ul{
+    margin: 20px 12px;
+}
+/* organização das listas no perfil_user */
+
+/* habilidades */
+
+.skills ul li{
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.skills ul li label{
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}
+/* end habilidades */
+
+/* experiências profissionais */
+.exp{
+    margin-top: 30px;
+}
+
+.exp_emp{
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+/* end experiências profissionais */
+
+/* linha entre as experiencias profissionais */
+.exp_between{
+    width: 40vw;
+    height: 1px;
+    background: #c4c4c4;
+    margin: -10px 12px -5px 12px;
+}
+/* end linha entre as experiencias profissionais */
+
+/* palavra chave perfil */
+.keyword ul{
+    margin-top: 5px;
+}
+/* end palavra chave perfil */
+
+.direction_color_custom{
+    color: #A00000;
+}
+
+
+
+
