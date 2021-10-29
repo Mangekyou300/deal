@@ -1,15 +1,27 @@
     {{-- Barra de navegação --}}
-    <div class="th">
-        <div class="nav">
-            <img class="img_user" src="{{ asset('deal/image/deal_logo_vermelho.png') }}">
-            <div class="navbar">
+    <nav>
+        <div class="icons">
+            <div class="img_user">
+                <i class="far fa-user"></i>       
+            </div>
+            <div class="chat">
+                <a href="/dashboard">
+                    <i class="fas fa-comments"></i>
+                </a> 
+            </div>
+            <div class="bell">
+                <a href="/perfil">
+                    <i class="fas fa-bell"></i>
+                </a> 
+            </div>
+        </div>
+        <div class="navbar">
                 <ul>
                     <li><a href="/dashboard">Home</a></li>
                     <li><a href="/dashboard">Oportunidades</a></li>
                     <li><a href="/dashboard">Candidaturas</a></li>
                 </ul>
             </div>
-        </div>
-    </div>
+        </nav>
     {{-- End Barra de navegação --}}
     

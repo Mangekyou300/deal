@@ -8,7 +8,7 @@
         </div>
         <div class="info_edit">
             <h2>Nome do Usuário</h2>
-            <ul class="d-flex star_color">
+            <ul class="star_color d-flex">
                 <li><i class="fas fa-star"></i></li>
                 <li><i class="fas fa-star"></i></li>
                 <li><i class="fas fa-star"></i></li>
