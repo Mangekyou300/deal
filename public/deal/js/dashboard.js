@@ -20,11 +20,18 @@ $('.featured-carousel').owlCarousel({
 /* configuração do menu escondido (arrumar)*/
 var user_icon = document.querySelector('#on_click');
 var hidden = document.querySelector('.user_click');
+var cont = document.querySelector('.main');
 
-user_icon.addEventListener('mouseover', function(){
+user_icon.addEventListener('click', function(){
     if (hidden.style.display === 'none'){
         hidden.style.display = 'block';
     }else
          hidden.style.display = 'none';
+});
+
+cont.addEventListener('click', function(){
+    if (hidden.style.display === 'block');{
+        hidden.style.display = 'none';
+    }
 });
 /* end configuração do menu escondido (arrumar)*/
