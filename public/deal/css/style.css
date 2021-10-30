@@ -50,6 +50,38 @@ nav{
     font-size: 28px;
 }
 
+/* menu escondido icone de usuario */
+.user_click{
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 60px;
+    background: #3F3E3E;
+    max-width: 140px;
+    width: 100%;
+    border-radius: 4px;
+    display: none;
+}
+
+.user_click_op{
+    margin-left: 15px;
+    
+}
+
+.user_click_op a{
+    color: #fff;
+    transition: 0.3s;
+}
+
+.user_click_op a:hover{
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.user_click_op a i{
+    margin-right: 6px;
+}
+/*end menu escondido icone de usuario */
+
 .chat{
     margin-left: 20px;
 }
@@ -261,10 +293,11 @@ nav{
     margin-top: 10px;
     font-size: 18px;
 }
-
+/* seta */
 .direction_color_custom{
     color: #A00000;
 }
+/* end seta */
 /* end habilidades */
 
 /* experiências profissionais */

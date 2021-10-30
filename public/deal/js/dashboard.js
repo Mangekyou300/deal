@@ -15,4 +15,16 @@ $('.featured-carousel').owlCarousel({
         }
     }
 })
-/* End Owl Carousel */
+/* end Owl Carousel */
+
+/* configuração do menu escondido (arrumar)*/
+var user_icon = document.querySelector('#on_click');
+var hidden = document.querySelector('.user_click');
+
+user_icon.addEventListener('mouseover', function(){
+    if (hidden.style.display === 'none'){
+        hidden.style.display = 'block';
+    }else
+         hidden.style.display = 'none';
+});
+/* end configuração do menu escondido (arrumar)*/

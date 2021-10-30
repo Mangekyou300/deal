@@ -1,8 +1,8 @@
     {{-- Barra de navegação --}}
     <nav>
         <div class="icons">
-            <div class="img_user">
-                <i class="far fa-user"></i>       
+            <div class="img_user" id="on_click">
+                <i class="far fa-user"></i>     
             </div>
             <div class="chat">
                 <a href="/dashboard">
@@ -15,6 +15,17 @@
                 </a> 
             </div>
         </div>
+        {{-- menu escondido --}}
+        <div class="user_click">
+            <div class="user_click_op">
+                <a href="/perfil"><i class="far fa-user"></i></i>Perfil</a>
+                <div class="perfil_between"></div>
+                <a href="/dashboard"><i class="fas fa-cog"></i>Configurações</a>
+                <div class="perfil_between"></div>
+                <a href="/dashboard"><i class="fas fa-sign-out-alt"></i>Sair</a>
+            </div>
+        </div>
+        {{-- end menu escondido --}}  
         <div class="navbar">
                 <ul>
                     <li><a href="/dashboard">Home</a></li>
