@@ -19,9 +19,9 @@
         <div class="user_click">
             <div class="user_click_op">
                 <a href="/perfil"><i class="far fa-user"></i></i>Perfil</a>
-                <div class="perfil_between"></div>
+                <div class="op_between"></div>
                 <a href="/dashboard"><i class="fas fa-cog"></i>Configurações</a>
-                <div class="perfil_between"></div>
+                <div class="op_between"></div>
                 <a href="/dashboard"><i class="fas fa-sign-out-alt"></i>Sair</a>
             </div>
         </div>

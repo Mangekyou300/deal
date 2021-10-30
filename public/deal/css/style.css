@@ -80,6 +80,12 @@ nav{
 .user_click_op a i{
     margin-right: 6px;
 }
+
+.op_between{
+    height: 1px;
+    width: 80%;
+    background: #fff;
+}
 /*end menu escondido icone de usuario */
 
 .chat{
