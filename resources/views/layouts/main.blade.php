@@ -16,10 +16,16 @@
 
 </head>
 <body>
+        @include('layouts.navbar')
 
-    <div class="content">
-        @yield('content')
-    </div>
+        <div class="container">
+            @include('layouts.breadcrumbs')
+
+            <div class="content">
+                @yield('content')
+            </div>
+        </div>
+        
     
     <script src="{{ asset('js/app.js') }}"></script>
     

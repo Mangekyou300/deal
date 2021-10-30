@@ -4,9 +4,6 @@
 
     @section('content')
 
-        @include('layouts.navbar')
-        
-        @include('layouts.breadcrumbs')
         
         <div class="main">
     
