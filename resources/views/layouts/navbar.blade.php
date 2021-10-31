@@ -3,7 +3,7 @@
         <div class="nav-container">
             <div class="icons">
                 <div class="img_user" id="on_click">
-                    <i class="far fa-user"></i>     
+                    <i class="far fa-user" id="icon_perfil_user"></i>     
                 </div>
                 <div class="chat">
                     <a href="/dashboard">
@@ -17,7 +17,7 @@
                 </div>
             </div>
             {{-- menu escondido --}}
-            <div class="user_click">
+            <div class="user_click hidden">
                 <div class="user_click_op">
                     <a href="/perfil"><i class="far fa-user"></i></i>Perfil</a>
                     <div class="op_between"></div>

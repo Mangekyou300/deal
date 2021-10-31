@@ -48,7 +48,6 @@ nav .nav-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 20px;
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -62,18 +61,22 @@ nav .nav-container {
 /* menu escondido icone de usuario */
 .user_click{
     position: absolute;
-    margin-left: 30px;
-    margin-top: 60px;
+    top: 65px;
     background: #3F3E3E;
     max-width: 140px;
     width: 100%;
     border-radius: 4px;
+    display: block;
+    z-index: 999;
+}
+
+.hidden {
     display: none;
 }
 
+
 .user_click_op{
-    margin-left: 15px;
-    
+    padding: 8px;
 }
 
 .user_click_op a{
@@ -92,27 +95,24 @@ nav .nav-container {
 
 .op_between{
     height: 1px;
-    width: 80%;
+    margin: 5px 0;
+    width: 100%;
     background: #fff;
 }
 /*end menu escondido icone de usuario */
 
-.chat{
+.chat, .bell{
     margin-left: 20px;
 }
 
 .icons a{
-    font-size: 24px;
+    font-size: 20px;
     color:#fff;
     transition: 0.3s;
 }
 
 .icons a:hover{
     opacity: 0.7;
-}
-
-.bell{
-    margin-left: 20px;
 }
 
 .navbar{
