@@ -10,23 +10,23 @@
                     </li>
                     {{-- palavra chave --}}
                     <li class="key">
-                        <label>Palavra Chave</label>
+                        <span>Palavra Chave</span>
                     </li>
                     <li class="key">
-                        <label>Palavra Chave</label>
+                        <span>Palavra Chave</span>
                     </li>
                     <li class="key">
-                        <label>Palavra Chave</label>
+                        <span>Palavra Chave</span>
                     </li>
                     {{-- informações da vaga --}}
                     <li class="info_title">
-                        <label>Título da vaga</label>
+                        <span>Título da vaga</span>
                     </li>
                     <li class="info_city">
-                        <label>Cidade</label>
+                        <span>Cidade</span>
                     </li>
                     <li class="info_name">
-                        <label>Contratante</label>
+                        <span>Contratante</span>
                     </li>
                 </ul>
             </div>

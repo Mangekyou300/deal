@@ -17,10 +17,12 @@ Route::get('/', function () {
     return view('deal.dashboard');
 });
 
-Auth::routes(); 
+Auth::routes();
 
 Route::view('/dashboard', 'deal.dashboard')->name('home');
 
 Route::view('/perfil', 'deal.perfil_user')->name('perfil_user');
 
 Route::view('/perfil/2', 'deal.perfil_contractor')->name('perfil_contractor');
+
+Route::view('vagas', 'deal.vagas')->name('vagas');
