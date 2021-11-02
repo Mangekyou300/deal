@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('deal.dashboard');
-});
+// Route::get('/', function () {
+//     return view('deal.dashboard');
+// });
 
 Auth::routes();
 
-Route::view('/dashboard', 'deal.dashboard')->name('home');
+Route::view('/', 'deal.dashboard')->middleware('auth')->name('home');
 
 Route::view('/perfil', 'deal.perfil_user')->name('perfil_user');
 

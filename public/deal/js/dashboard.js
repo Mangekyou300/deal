@@ -38,7 +38,3 @@ document.addEventListener('click', function(event) {
     }
 });
 /* end configuração do menu escondido (arrumar)*/
-<<<<<<< HEAD
-
-=======
->>>>>>> dac92b3f85d66afec745c6c18e85743e6414a14c
