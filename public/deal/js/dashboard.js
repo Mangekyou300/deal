@@ -11,7 +11,7 @@ $('.featured-carousel').owlCarousel({
             items:3
         },
         1000:{
-            items:5
+            items:4
         }
     }
 })
@@ -25,10 +25,10 @@ var cont = document.querySelector('.main');
 
 
 user_icon.addEventListener('click', function(){
-    
+
     hidden.classList.toggle('hidden');
-    
-    
+
+
 });
 
 document.addEventListener('click', function(event) {
@@ -38,4 +38,7 @@ document.addEventListener('click', function(event) {
     }
 });
 /* end configuração do menu escondido (arrumar)*/
+<<<<<<< HEAD
 
+=======
+>>>>>>> dac92b3f85d66afec745c6c18e85743e6414a14c
