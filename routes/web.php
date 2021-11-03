@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::view('/', 'deal.dashboard')->middleware('auth')->name('home');
+Route::view('/', 'deal.dashboard')->name('home');
 
 Route::view('/perfil', 'deal.perfil_user')->name('perfil_user');
 

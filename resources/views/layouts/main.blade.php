@@ -19,6 +19,7 @@
         @include('layouts.navbar')
 
         <div class="container">
+
             @include('layouts.breadcrumbs')
 
             <div class="content">
