@@ -17,7 +17,7 @@ $('.featured-carousel').owlCarousel({
 })
 /* end Owl Carousel */
 
-/* configuração do menu escondido (arrumar)*/
+/* configuração do menu escondido */
 var user_icon = document.querySelector('#on_click');
 var hidden = document.querySelector('.user_click');
 var cont = document.querySelector('.main');
@@ -37,4 +37,4 @@ document.addEventListener('click', function(event) {
         hidden.classList.add('hidden');
     }
 });
-/* end configuração do menu escondido (arrumar)*/
+/* end configuração do menu escondido */

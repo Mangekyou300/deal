@@ -170,6 +170,10 @@ nav .nav-container {
     transition: 0.3s;
 }
 
+.breadcrumbs ul li span{
+    color: #797979;
+}
+
 .breadcrumbs ul li a:hover{
     color: rgb(173, 7, 7)
 }
@@ -339,6 +343,60 @@ nav .nav-container {
 }
 /* end palavra chave perfil */
 
+/* avaliações */
+.container_ev{
+    display: flex;
+    background: #E4E4E4;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    width: 100%;
+    height: 150px;
+}
 
+.align_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
 
+.img_ev{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #fff;
+}
 
+.img_ev i{
+    font-size: 28px;
+}
+
+.desc_ev{
+    margin-top: 5px;
+    width: 80%;
+}
+
+.desc_ev h4{
+    color: #000748;
+    margin-bottom: 0px;
+}
+
+.desc_ev span{
+    font-size: 16px;
+    color: #000;
+}
+
+.star_ev{
+    margin-bottom: 1px;
+}
+
+.star_ev i{
+    font-size: 10px;
+    margin-right: 3px;
+}
+
+/* end avaliações */

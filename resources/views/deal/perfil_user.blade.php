@@ -46,8 +46,33 @@
                     </ul>
                 </div>
             </div>
-            
-
+            <div class="evaluation">
+                <h3 class="subtitle_perfil">Avaliações</h3>
+                <div class="between"></div>
+                <div class="container_ev">
+                    <div class="align_icon">
+                        <div class="img_ev">
+                            <i class="far fa-user"></i>  
+                        </div>
+                    </div>
+                    <div class="desc_ev">
+                        <h4>Contratante</h4>
+                        <span>Projeto</span>
+                        <ul class="star_color d-flex star_ev">
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                        </ul>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
 
     @endsection
