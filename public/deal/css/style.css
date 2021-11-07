@@ -290,7 +290,7 @@ nav .nav-container {
 /* end inicio do perfil */
 
 /* h3 Subtitulo dos Perfis */
-.subtitle_perfil{
+.subtitle_perfil, .subtitle{
     margin-bottom: -15px;
     color: #4885FD;
     font-weight: normal;
@@ -400,3 +400,131 @@ nav .nav-container {
 }
 
 /* end avaliações */
+
+.side_bar{
+    display: flex;
+    width: 310px;
+    height: calc(80vh - 100px);
+    position: fixed;
+    left: 0;
+    top: 100;
+    transition: all .3s ease-in-out;
+}
+
+.side_bar.toggled{
+    width: 56px;
+}
+
+.left_bar{
+    background: #E4E4E4;
+    width: 280px;
+    height: calc(80vh - 100px);
+    outline: none;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.left_bar.toggled{
+    width: 0px;
+}
+
+.left_bar h2{
+    padding-top: 10px;
+    margin-left: 20px;
+}
+
+.left_bar form{
+    margin-top: 25px;
+}
+
+.form-checkbox{
+    margin-top: -3px;
+    margin-left: 30px;
+}
+
+.main_vagas_toggle_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(121, 11, 11);
+    margin-top: 150px;
+    width: 36px;
+    height: 36px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.vagas_toggle_button{
+    background: transparent;
+    color: #fff;
+    outline: none;
+    border: none;
+    position: absolute;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    transform: rotate(360deg);
+    transition: all .3s ease-in-out;
+}
+
+.vagas_toggle_button.rotated{
+    transform: rotate(180deg);
+}
+
+.text_camp{
+    margin-left: 25px;
+}
+
+.text_camp label{
+    display: block;
+    font-weight: bold;
+}
+
+.text_camp input{
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.btn_pesquisa{
+    margin-top: 20px;
+    margin-left: 25%;
+}
+
+.container_vagas{
+    margin: 20px 0px 0px 100px;
+}
+
+.container_vagas h3{
+    margin-bottom: 30px;
+}
+
+.main_vagas{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.title_vaga, .desc_vaga{
+    font-size: 16px;
+    display: block;
+}
+
+.key_vaga{
+    display: inline-block;
+    margin: 5px 0px 0px 0px;
+    padding: 0px 6px 0px 6px;
+    background: #000748;
+    border-radius: 50px;
+    color:#fff;
+    text-align: center;
+    font-size: 12px;
+    width: 100px;
+}
+
+.view_desc{
+    font-size: 16px;
+}
+
+.eye{
+    margin-right: 20px;
+}

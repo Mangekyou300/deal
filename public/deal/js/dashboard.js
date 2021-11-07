@@ -21,7 +21,9 @@ $('.featured-carousel').owlCarousel({
 var user_icon = document.querySelector('#on_click');
 var hidden = document.querySelector('.user_click');
 var cont = document.querySelector('.main');
-
+const vagaSideBar = document.querySelector('.left_bar');
+const mainVagaSideBar = document.querySelector('.side_bar');
+const buttonToggleSideBar = document.querySelector('.vagas_toggle_button');
 
 
 user_icon.addEventListener('click', function(){
@@ -38,3 +40,10 @@ document.addEventListener('click', function(event) {
     }
 });
 /* end configuração do menu escondido */
+
+function toggleSideBar(event){
+    event.preventDefault();
+    vagaSideBar.classList.toggle('toggled');
+    mainVagaSideBar.classList.toggle('toggled');
+    buttonToggleSideBar.classList.toggle('rotated');
+}
