@@ -31,7 +31,7 @@
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/vagas">Oportunidades</a></li>
-                    <li><a href="/">Candidaturas</a></li>
+                    <li><a href="/candidaturas">Candidaturas</a></li>
                 </ul>
             </div>
         </div>

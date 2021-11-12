@@ -252,6 +252,7 @@ nav .nav-container {
     height: 5px;
     border-radius: 60px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 /* end barra azul */
 
@@ -398,9 +399,9 @@ nav .nav-container {
     font-size: 10px;
     margin-right: 3px;
 }
-
 /* end avaliações */
 
+/* filterBar */
 .side_bar{
     display: flex;
     width: 310px;
@@ -429,8 +430,9 @@ nav .nav-container {
 }
 
 .left_bar h2{
+    display: flex;
+    justify-content: center;
     padding-top: 10px;
-    margin-left: 20px;
 }
 
 .left_bar form{
@@ -442,7 +444,7 @@ nav .nav-container {
     margin-left: 30px;
 }
 
-.main_vagas_toggle_button{
+.main_toggle_button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -489,15 +491,17 @@ nav .nav-container {
     margin-left: 25%;
 }
 
-.container_vagas{
+.container_vagas, .container_candidaturas{
     margin: 20px 0px 0px 100px;
 }
 
-.container_vagas h3{
+.container_vagas h3, .container_candidaturas h3{
     margin-bottom: 30px;
 }
+/* end filterBar */
 
-.main_vagas{
+/* vagas */
+.main_vagas, .main_candidaturas{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -522,9 +526,54 @@ nav .nav-container {
 }
 
 .view_desc{
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .eye{
     margin-right: 20px;
 }
+/* end vagas */
+
+/* candidaturas */
+.candidaturas h4{
+    font-size: 19px;
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+
+/* ativo */
+.circle_color_on{
+    color: rgb(45, 224, 45);
+}
+
+/* inativo */
+.circle_color_off{
+    color: rgb(173, 7, 7);
+}
+
+.key_cand{
+    display: inline-block;
+    margin: 5px 0px 7px 0px;
+    padding: 0px 6px 0px 6px;
+    background: #a01fc0;
+    border-radius: 50px;
+    color:#fff;
+    text-align: center;
+    font-size: 10px;
+}
+
+.candidaturas h3{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+.settings_cand i{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.cancel_cand{
+    color: rgb(173, 7, 7);
+}
+/* end candidaturas */

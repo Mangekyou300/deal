@@ -46,4 +46,14 @@
     </div>
 {{-- end breadcrumb perfil --}}
 
+@elseif(Route::is('candidaturas'))
+
+    <div class="breadcrumbs">
+        <ul>
+            <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+            <li class="bc_color_custom"><i class="fas fa-angle-double-right"></i></li>
+            <li><span><i class="fas fa-id-card"></i> Candidaturas</span></li>
+        </ul>
+    </div>
+
 @endif
