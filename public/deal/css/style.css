@@ -74,22 +74,29 @@ nav .nav-container {
     display: none;
 }
 
+.form-btn-logout button {
+    border: none;
+    background-color: inherit;
+}
 
 .user_click_op{
     padding: 8px;
 }
 
-.user_click_op a{
+.user_click_op a,
+.user_click_op button{
     color: #fff;
     transition: 0.3s;
 }
 
-.user_click_op a:hover{
+.user_click_op a:hover,
+.user_click_op button:hover {
     text-decoration: none;
     opacity: 0.7;
 }
 
-.user_click_op a i{
+.user_click_op a i,
+.user_click_op button i{
     margin-right: 6px;
 }
 

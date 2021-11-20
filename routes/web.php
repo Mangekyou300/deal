@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,8 +20,9 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::group(['middleware' => 'auth'], function() {
-    Route::view('/', 'deal.dashboard')->name('home');
+Route::middleware('auth')->group(function() {
+    
+    Route::get('/', [HomeController::class, 'index'])->name('home');
 
     Route::view('/perfil', 'deal.perfil_user')->name('perfil_user');
     
