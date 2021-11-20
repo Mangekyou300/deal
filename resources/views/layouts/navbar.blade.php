@@ -23,7 +23,7 @@
                     <div class="op_between"></div>
                     <a href="/"><i class="fas fa-cog"></i>Configurações</a>
                     <div class="op_between"></div>
-                    <a href="/"><i class="fas fa-sign-out-alt"></i>Sair</a>
+                    <a href="{{ Auth::logout() }}"><i class="fas fa-sign-out-alt"></i>Sair</a>
                 </div>
             </div>
             {{-- end menu escondido --}}  

@@ -1,0 +1,68 @@
+#auth-body {
+    background-color: #010524;
+
+}
+
+#auth-content-custom {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+#auth-content-custom img {
+    width: 200px;
+    margin-bottom: 40px;
+}
+
+#auth-content-custom #card-login {
+    width: 350px;
+}
+
+#auth-content-custom label {
+    font-weight: 500;
+}
+
+#auth-content-custom .input-text-custom {
+    border: none;
+    border-bottom: 2px solid #010524;
+    border-radius: 0px;
+    overflow: hidden;
+    color: #495057;
+    background-color: #fff;
+    display: block;
+    width: 100%;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    padding: 5px;
+}
+
+#auth-content-custom .input-text-custom:focus {
+    border-bottom: 3px solid #010524;
+    transition: all .1s ease-in-out;
+}
+
+#auth-content-custom .input-text-custom {
+    outline: none!important;
+}
+
+.btn-custom-width {
+    width: 48%;
+}
+
+#card-register {
+    max-width: 405px;
+    min-width: 280px;
+    width: 100%;
+}
+

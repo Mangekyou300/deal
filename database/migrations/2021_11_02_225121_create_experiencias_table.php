@@ -20,7 +20,7 @@ class CreateExperienciasTable extends Migration
             $table->date('dt_inicio');
             $table->date('dt_fim');
             $table->longText('descricao');
-            $table->foreignId('user_id')->constrainted('users');
+            $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
     }

@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
-    <title>Title</title>
+    <title>@yield('title')</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,10 +16,13 @@
 
     @yield('style')
 
-    <title>@yield('title')</title>
   </head>
-  <body>
-      @yield('content')
+  <body id="auth-body">
+    <div id="auth-content-custom">
+      <img src="{{ asset('deal/image/logos/deal-logo-branco-cortado.png') }}" alt="">
+        @yield('content')
+      </div>
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   
