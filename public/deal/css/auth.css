@@ -25,7 +25,14 @@
 }
 
 #auth-content-custom #card-login {
-    width: 350px;
+    min-width: 280px;
+    max-width: 350px;
+}
+
+#card-register {
+    max-width: 405px;
+    min-width: 280px;
+    width: 100%;
 }
 
 #auth-content-custom label {
@@ -60,9 +67,5 @@
     width: 48%;
 }
 
-#card-register {
-    max-width: 405px;
-    min-width: 280px;
-    width: 100%;
-}
+
 

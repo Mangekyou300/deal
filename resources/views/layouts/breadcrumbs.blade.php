@@ -6,7 +6,7 @@
         <ul>
             <li><span><i class="fas fa-home"></i> Home</span></li>
         </ul>
-        <div class="logo"><img class="img_logo" src="{{ asset('deal/image/deal_logo_transparente.png') }}"></div>
+        <div class="logo"><img class="img_logo" src="{{ asset('deal/image/logos/deal-logo-com-vermelho-transparente-cortado.png') }}"></div>
     </div>
 {{-- end breadcrumb --}}
 

@@ -6,7 +6,9 @@
 
         
         <div class="main">
-            <h1>Olá Candidato!</h1>
+
+
+            <h1>{{ __('Olá ') . auth()->user()->name }}!</h1>
 
             @include('layouts.carousel-interest')
 
