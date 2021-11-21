@@ -13,7 +13,7 @@
                 <div class="main_vagas">
                     <div class="vagas">
                         <h5>Contratante</h5>
-                        <span class="title_vaga">Titulo da vaga</span>
+                        <span class="title_vaga"><a href="/vaga_de_emprego">Titulo da vaga</a></span>
                         <span class="desc_vaga">breve descrição da vaga</span>
                         <span class="key_vaga">palavra chave</span>
                         <span class="key_vaga">palavra chave</span>
@@ -25,7 +25,7 @@
                 <div class="main_vagas">
                     <div class="vagas">
                         <h5>Contratante</h5>
-                        <span class="title_vaga">Titulo da vaga</span>
+                        <span class="title_vaga"><a href="/vaga_de_emprego">Titulo da vaga</a></span>
                         <span class="desc_vaga">breve descrição da vaga</span>
                         <span class="key_vaga">palavra chave</span>
                         <span class="key_vaga">palavra chave</span>
@@ -37,7 +37,7 @@
                 <div class="main_vagas">
                     <div class="vagas">
                         <h5>Contratante</h5>
-                        <span class="title_vaga">Titulo da vaga</span>
+                        <span class="title_vaga"><a href="/vaga_de_emprego">Titulo da vaga</a></span>
                         <span class="desc_vaga">breve descrição da vaga</span>
                         <span class="key_vaga">palavra chave</span>
                         <span class="key_vaga">palavra chave</span>
@@ -49,7 +49,7 @@
                 <div class="main_vagas">
                     <div class="vagas">
                         <h5>Contratante</h5>
-                        <span class="title_vaga">Titulo da vaga</span>
+                        <span class="title_vaga"><a href="/vaga_de_emprego">Titulo da vaga</a></span>
                         <span class="desc_vaga">breve descrição da vaga</span>
                         <span class="key_vaga">palavra chave</span>
                         <span class="key_vaga">palavra chave</span>
@@ -61,7 +61,7 @@
                 <div class="main_vagas">
                     <div class="vagas">
                         <h5>Contratante</h5>
-                        <span class="title_vaga">Titulo da vaga</span>
+                        <span class="title_vaga"><a href="/vaga_de_emprego">Titulo da vaga</a></span>
                         <span class="desc_vaga">breve descrição da vaga</span>
                         <span class="key_vaga">palavra chave</span>
                         <span class="key_vaga">palavra chave</span>

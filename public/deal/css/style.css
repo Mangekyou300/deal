@@ -520,6 +520,15 @@ nav .nav-container {
     display: block;
 }
 
+.title_vaga a{
+    color:black;
+}
+
+.title_vaga a:hover{
+    text-decoration: none;
+    color: #A00000;
+}
+
 .key_vaga{
     display: inline-block;
     margin: 5px 0px 0px 0px;
@@ -584,3 +593,77 @@ nav .nav-container {
     color: rgb(173, 7, 7);
 }
 /* end candidaturas */
+
+/* Vaga de emprego */
+.titulo_vaga_de_emprego{
+    margin-top: 50px;
+    margin-bottom: 35px;
+}
+
+.titulo_vaga_de_emprego h3{
+    font-size: 22px;
+    color: #4885FD;
+}
+
+.info_vagas_de_emprego{
+    height: 200px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon_vaga_de_emprego{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background: #c4c4c4;
+    border-radius: 50%; 
+    margin-right: 30px;
+}
+
+.icon_vaga_de_emprego i{
+    font-size: 50px;
+}
+
+.edit_vagas_de_emprego{
+    font-size: 20px;
+}
+
+.job_type{
+    display: inline-block;
+    margin: 5px 0px 0px 0px;
+    padding: 0px 6px 0px 6px;
+    background: #a01fc0;
+    border-radius: 50px;
+    color:#fff;
+    text-align: center;
+    font-size: 12px;
+}
+
+.txt_vaga_de_emprego{
+    width: 90%;
+    margin-bottom: 40px;
+}
+
+.requisitos_vaga_de_emprego{
+    font-size: 18px;
+    margin-top: -10px;
+}
+
+.subitens_vaga_de_emprego{
+    margin-left: 15px;
+}
+
+.key_vaga_de_emprego{
+    display: inline-block;
+    margin: 5px 0px 0px 0px;
+    padding: 0px 4px 0px 4px;
+    background: #000748;
+    border-radius: 50px;
+    color:#fff;
+    text-align: center;
+    font-size: 10px;
+}
+/* end Vaga de emprego */

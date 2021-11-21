@@ -31,4 +31,6 @@ Route::middleware('auth')->group(function() {
     Route::view('vagas', 'deal.vagas')->name('vagas');
     
     Route::view('candidaturas', 'deal.candidaturas')->name('candidaturas');
+
+    ROute::view('vaga_de_emprego', 'deal.vaga_de_emprego')->name('vaga_de_emprego');
 });
