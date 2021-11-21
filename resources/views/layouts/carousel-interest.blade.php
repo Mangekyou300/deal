@@ -1,4 +1,4 @@
-<h2>Talvez possa te interessar</h2>
+<h3>Talvez possa te interessar</h3>
             {{--  carousel --}}
             <div class="owl-carousel featured-carousel owl-theme">
                 <div class="item">

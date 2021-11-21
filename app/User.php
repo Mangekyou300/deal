@@ -37,4 +37,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'tipo_usuario_id'=> 'integer'
     ];
+
+    public function perfil()
+    {
+        return $this->hasOne(Perfil::class, 'user_id', 'id');
+    }
 }

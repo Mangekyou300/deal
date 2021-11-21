@@ -150,6 +150,10 @@ nav .nav-container {
 }
 /* end barra de manvegação */
 
+.container {
+    margin-top:70px;
+}
+
 /* breadcrumbs */
 .breadcrumbs{
     display: flex;
@@ -202,6 +206,8 @@ nav .nav-container {
 /* style geral */
 .main{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: calc(100vh - 70px);
+    padding: 30px 0;
 }
 
 .main h1, h2{
@@ -296,6 +302,91 @@ nav .nav-container {
     color: rgb(241, 208, 20);
 }
 /* end inicio do perfil */
+
+/* Perfil create */
+
+.perfil-photo-container {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+
+}
+
+.photo-container {
+    background-color: lightgray;
+    font-size: 3.4rem;
+    width: 90px;
+    height: 90px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.btn-avatar-group {
+    display: flex;
+    flex-direction: column;
+}
+
+input#avatar {
+    display: none;
+}
+
+.btn-input-avatar {
+    display: inline-block;
+    background-color: #000748;
+    font-size: .9rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: none;
+    color: white;
+}
+
+.btn-input-avatar:hover {
+    transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -ms-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+    background-color: #010e81;
+}
+
+.btn-remove-avatar {
+    background-color: transparent;
+    color: #000748;
+    font-size: .9rem;
+    border: 2px solid #000748;
+    padding: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.btn-remove-avatar:hover {
+    color: white;
+    background-color: #000748;
+    transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -ms-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+}
+
+/* End perfil create */
 
 /* h3 Subtitulo dos Perfis */
 .subtitle_perfil, .subtitle{
@@ -619,7 +710,7 @@ nav .nav-container {
     width: 80px;
     height: 80px;
     background: #c4c4c4;
-    border-radius: 50%; 
+    border-radius: 50%;
     margin-right: 30px;
 }
 

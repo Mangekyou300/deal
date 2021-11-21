@@ -11,7 +11,7 @@
 {{-- end breadcrumb --}}
 
 {{-- breadcrumb perfis de usuarios --}}
-@elseif(Route::is('perfil_user'))
+@elseif(Route::is('perfil.professional'))
 
     <div class="breadcrumbs">
         <ul>
@@ -23,7 +23,7 @@
 {{-- end breadcrumb perfil usuarios --}}
 
 {{-- breadcrumb perfis de contratantes --}}
-@elseif(Route::is('perfil_contractor'))
+@elseif(Route::is('perfil.contractor'))
 
     <div class="breadcrumbs">
         <ul>

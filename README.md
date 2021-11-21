@@ -15,3 +15,11 @@ Foram realizadas as seguintes alterações no código:
 
 - Atualize seu banco de dados utilizando o comando ** php artisan migrate:fresh --seed **.
 - Caso algo dê errado, utilize o comando composer dumpautoload, depois tente atualizar novamente
+
+
+## Atualizações dd/mm/2021 - Aurélio Silva de Jesus
+
+Essa atualização foi 100% focada no perfil do usuário, portanto agora o sistema é capaz de:
+
+- Retornar a página de criação de perfil correta, com base no tipo do usuário
+- Retornar a página de visualização de perfil correta, com base no tipo do usuário

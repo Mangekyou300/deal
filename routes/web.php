@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PerfilController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,15 +22,17 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::middleware('auth')->group(function() {
-    
+
     Route::get('/', [HomeController::class, 'index'])->name('home');
 
-    Route::view('/perfil', 'deal.perfil_user')->name('perfil_user');
-    
-    Route::view('/perfil/2', 'deal.perfil_contractor')->name('perfil_contractor');
-    
+    Route::prefix('perfil')->group(function() {
+        Route::get('create', [PerfilController::class, 'create'])->name('perfil.create');
+        Route::get('show/{perfil}', [PerfilController::class, 'show'])->name('perfil.show');
+        Route::post('storeProfessional', [PerfilController::class, 'storeProfessional'])->name('perfil.storeProfessional');
+    });
+
     Route::view('vagas', 'deal.vagas')->name('vagas');
-    
+
     Route::view('candidaturas', 'deal.candidaturas')->name('candidaturas');
 
     ROute::view('vaga_de_emprego', 'deal.vaga_de_emprego')->name('vaga_de_emprego');

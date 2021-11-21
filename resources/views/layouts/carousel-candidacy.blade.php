@@ -1,4 +1,4 @@
-<h2>Suas Candidaturas</h2>
+<h3>Suas Candidaturas</h3>
 {{--  carousel --}}
 <div class="owl-carousel featured-carousel owl-theme">
     <div class="item">
