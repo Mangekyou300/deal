@@ -15,10 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('deal.dashboard');
-// });
-
 Auth::routes();
 
 Route::middleware('auth')->group(function() {

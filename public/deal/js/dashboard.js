@@ -29,8 +29,6 @@ const buttonToggleSideBar = document.querySelector('.vagas_toggle_button');
 user_icon.addEventListener('click', function(){
 
     hidden.classList.toggle('hidden');
-
-
 });
 
 document.addEventListener('click', function(event) {

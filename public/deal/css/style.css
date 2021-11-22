@@ -17,6 +17,29 @@ a{
     text-decoration: none;
 }
 
+.default-radius {
+    border-radius: 5px!important;
+    -webkit-border-radius: 5px!important;
+    -moz-border-radius: 5px!important;
+    -ms-border-radius: 5px!important;
+    -o-border-radius: 5px!important;
+}
+
+.btn-submit-custom {
+    background-color: #000748;
+    color: #fff;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.btn-submit-custom:hover {
+    background-color: #021086;
+    color: #fff;
+}
+
 /* barra de manvegação */
 nav{
     position: fixed;
@@ -206,7 +229,7 @@ nav .nav-container {
 /* style geral */
 .main{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    height: calc(100vh - 70px);
+    min-height: calc(100vh - 70px);
     padding: 30px 0;
 }
 
@@ -306,20 +329,20 @@ nav .nav-container {
 /* Perfil create */
 
 .perfil-photo-container {
-    margin: 2rem 0;
+    margin: 1rem 0 2rem 0;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
 
 }
 
 .photo-container {
     background-color: lightgray;
-    font-size: 3.4rem;
-    width: 90px;
-    height: 90px;
-    margin-right: 20px;
+    font-size: 3.6rem;
+    width: 110px;
+    height: 110px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -332,58 +355,56 @@ nav .nav-container {
 
 .btn-avatar-group {
     display: flex;
-    flex-direction: column;
+    margin-top: 1rem;
 }
 
 input#avatar {
     display: none;
 }
 
-.btn-input-avatar {
+.btn-input-avatar,
+.btn-remove-avatar {
     display: inline-block;
-    background-color: #000748;
-    font-size: .9rem;
-    cursor: pointer;
-    padding: 5px;
+    text-align: center;
+    width: 140px;
+    margin: 0 5px 0 5px;
+    border: 2px solid;
     border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: .9rem;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    border: none;
+    transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -ms-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+}
+
+.btn-input-avatar {
+    background-color: #000748;
+    border-color: #fff;
     color: white;
 }
 
 .btn-input-avatar:hover {
-    transition: .2s ease-in-out;
-    -webkit-transition: .2s ease-in-out;
-    -moz-transition: .2s ease-in-out;
-    -ms-transition: .2s ease-in-out;
-    -o-transition: .2s ease-in-out;
-    background-color: #010e81;
+    background-color: transparent;
+    border-color: #000748;
+    color: #000748;
 }
 
 .btn-remove-avatar {
     background-color: transparent;
+    border-color: #000748;
     color: #000748;
-    font-size: .9rem;
-    border: 2px solid #000748;
-    padding: 5px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
 }
 
 .btn-remove-avatar:hover {
-    color: white;
     background-color: #000748;
-    transition: .2s ease-in-out;
-    -webkit-transition: .2s ease-in-out;
-    -moz-transition: .2s ease-in-out;
-    -ms-transition: .2s ease-in-out;
-    -o-transition: .2s ease-in-out;
+    color: white;
 }
 
 /* End perfil create */
@@ -750,7 +771,7 @@ input#avatar {
 .key_vaga_de_emprego{
     display: inline-block;
     margin: 5px 0px 0px 0px;
-    padding: 0px 4px 0px 4px;
+    padding: 0px 4px;
     background: #000748;
     border-radius: 50px;
     color:#fff;
@@ -758,3 +779,24 @@ input#avatar {
     font-size: 10px;
 }
 /* end Vaga de emprego */
+
+/* footer */
+
+footer {
+    text-align: center;
+    background-color: #000748;
+    width: 100%;
+    bottom: 0;
+    margin-top: 20px;
+    padding: 15px 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer img {
+    max-width: 50px;
+}
+
+/* end footer */
