@@ -778,6 +778,38 @@ input#avatar {
     text-align: center;
     font-size: 10px;
 }
+
+.bt_baga_de_emprego{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bt_baga_de_emprego button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5px 0px 5px;
+    margin: 0px 10px 0px 0px;
+    border-radius: 5px;
+    height: 20px;
+    width: auto;
+    color: #fff;
+    border: none;
+    font-size: 12px;
+}
+
+.bt_baga_de_emprego button i{
+    padding-right: 5px;
+}
+
+.cadastrar{
+    background: #4885FD;
+}
+
+.reportar{
+    background: rgb(138, 3, 3);
+}
+
 /* end Vaga de emprego */
 
 /* footer */

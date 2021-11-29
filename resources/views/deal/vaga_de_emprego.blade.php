@@ -49,6 +49,11 @@
                     <li class="key_vaga_de_emprego">Palavra Chave</li>
                 </ul>
             </div>
+            <div class="bt_baga_de_emprego">
+                <button class="cadastrar"><i class="fas fa-file-upload"></i>Cadastrar</button>
+                <button class="reportar"><i class="fas fa-exclamation-circle"></i>Reportar</button>
+            </div>
+            
         </div>
         
 @endsection
