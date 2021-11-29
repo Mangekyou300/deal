@@ -798,12 +798,16 @@ input#avatar {
     font-size: 12px;
 }
 
+.bt_baga_de_emprego button:hover{
+    opacity: 0.8;
+}
+
 .bt_baga_de_emprego button i{
     padding-right: 5px;
 }
 
 .cadastrar{
-    background: #4885FD;
+    background: #2c70f6;
 }
 
 .reportar{
