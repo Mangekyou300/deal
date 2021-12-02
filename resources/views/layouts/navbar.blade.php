@@ -36,10 +36,12 @@
                 </div>
             </div>
             {{-- end menu escondido --}}
+
+            {{-- Itens de navegação --}}
             <div class="navbar">
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/vagas">Oportunidades</a></li>
+                    <li><a href="{{ route('vagas') }}">Oportunidades</a></li>
                     <li><a href="/candidaturas">Candidaturas</a></li>
                 </ul>
             </div>

@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\CandidaturasController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PerfilController;
+use App\Http\Controllers\VagasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,14 +24,24 @@ Route::middleware('auth')->group(function() {
     Route::get('/', [HomeController::class, 'index'])->name('home');
 
     Route::prefix('perfil')->group(function() {
+
         Route::get('create', [PerfilController::class, 'create'])->name('perfil.create');
         Route::get('show/{perfil}', [PerfilController::class, 'show'])->name('perfil.show');
         Route::post('storeProfessional', [PerfilController::class, 'storeProfessional'])->name('perfil.storeProfessional');
     });
 
-    Route::view('vagas', 'deal.vagas')->name('vagas');
+    Route::prefix('vagas')->group(function() {
 
-    Route::view('candidaturas', 'deal.candidaturas')->name('candidaturas');
+        Route::get('/', [VagasController::class, 'index'])->name('vagas');
+        Route::get('/create', [VagasController::class, 'create'])->name('vagas.create');
+        Route::get('show/{vaga?}', [VagasController::class, 'show'])->name('vagas.show');
+        Route::post('store', [VagasController::class, 'store'])->name('vagas.store');
+    });
 
-    ROute::view('vaga_de_emprego', 'deal.vaga_de_emprego')->name('vaga_de_emprego');
+    Route::prefix('candidaturas')->group(function() {
+
+        Route::get('/', [CandidaturasController::class, 'index'])->name('candidaturas');
+    });
+
+   
 });

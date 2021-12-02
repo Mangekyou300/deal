@@ -9,7 +9,13 @@
             @include('layouts.filterBar')
 
             <div class="container_vagas">
-                <h3 class="subtitle">Lista de Vagas</h3>
+                <div class="container_vagas_header">
+                    <h3 class="subtitle">Lista de Vagas</h3>
+                    <a href="{{ route('vagas.create') }}" class="btn-nova-vaga">
+                        <i class="fas fa-plus"></i>
+                        Nova vaga
+                    </a>
+                </div>
                 <div class="main_vagas">
                     <div class="vagas">
                         <h5>Contratante</h5>

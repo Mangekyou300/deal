@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
-@section('title, Vaga de Emprego')
+@section('title', 'Vaga de Emprego')
+
 
     @section('content')
 

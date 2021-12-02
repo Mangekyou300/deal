@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    --deep-blue: #000748;
+    --light-blue: #4885FD;
+    --light-blue-hover: #2169fa;
+    --deep-red: #ad0707;
+}
+
 body{
     max-width: 100%;
     overflow-x: hidden;
@@ -707,6 +714,51 @@ input#avatar {
 /* end candidaturas */
 
 /* Vaga de emprego */
+
+.container_vagas_header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.container_vagas_header .subtitle{
+    margin: 0;
+    font-weight: normal;
+}
+
+.btn-nova-vaga {
+    color: white;
+    background-color: var(--light-blue);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btn-nova-vaga:hover {
+    color: white;
+    background-color: var(--light-blue-hover);
+    transition: .2s ease-in-out;
+    text-decoration: none;
+}
+
+.vaga_photo_container {
+    display: flex;
+    justify-content: center;
+}
+
+.vaga_photo_container .photo-container {
+    margin-right: 20px;
+}
+
+#abilities {
+    padding: 0 15px;
+}
+
+#abilities li i {
+    color: var(--deep-red);
+}
+
 .titulo_vaga_de_emprego{
     margin-top: 50px;
     margin-bottom: 35px;

@@ -42,5 +42,7 @@
     {{-- main js --}}
     <script src="{{ asset('deal/js/dashboard.js') }}"></script>
 
+    @yield('scripts')
+
 </body>
 </html>
