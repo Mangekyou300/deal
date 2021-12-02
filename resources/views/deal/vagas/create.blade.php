@@ -28,11 +28,6 @@
                     <div class="between"></div>
 
                     <div class="row">
-
-                    </div>
-
-
-                    <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="descricao">Descrição</label>
@@ -42,8 +37,6 @@
                             </div>
                         </div>
                     </div>
-
-
 
                     <h3 class="subtitle mb-0 mt-4">Quais são os requisitos de sua vaga?</h3>
 
@@ -66,28 +59,7 @@
                     </div>
 
                     <div class="row">
-                        <ul id="abilities">
-                            {{-- <li>
-                                <i class="fas fa-angle-double-right"></i>
-                                <span>Habilidade</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-angle-double-right"></i>
-                                <span>Habilidade</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-angle-double-right"></i>
-                                <span>Habilidade</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-angle-double-right"></i>
-                                <span>Habilidade</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-angle-double-right"></i>
-                                <span>Habilidade</span>
-                            </li> --}}
-                        </ul>
+                        <ul id="abilities"></ul>
                     </div>
 
                     <button type="submit" class="btn btn-submit-custom">Salvar</button>
