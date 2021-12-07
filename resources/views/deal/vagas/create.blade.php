@@ -15,18 +15,23 @@
                             <i class="fas fa-gavel"></i>
                         </div>
                         <div class="btn-avatar-group">
-                            <div class="form-group">
-                                <label for="titulo" class="subtitle">Título</label>
-                                <input type="text" class="form-control form-control-sm" name="titulo" id="titulo"
-                                    placeholder="">
-                            </div>
+                            <h4>Vaga de {{ Auth::user()->name }}</h4>
+                            <p></p>
                         </div>
                     </div>
 
                     <h3 class="subtitle mb-0">Descreva a vaga</h3>
 
                     <div class="between"></div>
-
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="titulo">Título da vaga</label>
+                                <input type="text" class="form-control form-control-sm" name="titulo" id="titulo"
+                                    placeholder="">
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
