@@ -82,8 +82,8 @@
                         <div class="col-md-3">
                             <div class="from-group">
                                 <div class="date">
-                                    <label for="data_de_expiracao">Data limite</label>
-                                    <input type="date" class="mb-5 form-control" name="data_de_expiracao" required>
+                                    <label for="expire_date">Data limite</label>
+                                    <input type="date" class="mb-5 form-control" id="expire_date" name="expire_date" required>
                                 </div>
                             </div>
                         </div>

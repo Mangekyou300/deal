@@ -21,8 +21,30 @@ btnAddAbility.addEventListener('click', function(event) {
 });
 
 formCreateVaga.addEventListener('submit', function(event) {
+
     event.preventDefault();
-    alert("nada não");
+
+    const {titulo, descricao, start_date, expire_date } = formCreateVaga;
+
+    const formData = {
+        titulo: titulo.value, 
+        descricao: descricao.value, 
+        dt_abertura: start_date.value, 
+        dt_fechamento: expire_date.value,
+        habilidades: abilities
+    }
+
+    $.ajax({
+        headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+        type: "post",
+        url: "/vagas/store",
+        data: formData,
+        dataType: "json",
+        success: function (response) {
+            console.log(response)
+        }
+    });
+
 });
 
 function addAbilityToArray() {
