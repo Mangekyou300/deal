@@ -98,7 +98,7 @@
                             <div class="form-group">
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input type="radio"  class="form-check-input" id="fixed_employment" name="job_type" value="1">
+                                        <input type="radio"  class="form-check-input" id="job_type" class="fixed_employment" name="job_type" value="1">
                                         Emprego Fixo
                                     </label>
                                 </div>
@@ -107,7 +107,7 @@
                         <div class="col-md-2">
                             <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" id="freelance" name="job_type" value="2">  
+                                    <input type="radio" class="form-check-input" id="job_type" class="freelance" name="job_type" value="2">  
                                     Freelance
                                 </label>
                             </div>

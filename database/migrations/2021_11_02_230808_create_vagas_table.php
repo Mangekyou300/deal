@@ -20,6 +20,7 @@ class CreateVagasTable extends Migration
             $table->date('dt_abertura');
             $table->date('dt_fechamento');
             $table->longText('descricao');
+            $table->enum('tipo_vaga', ['emprego_fixo', 'freelance']);
             $table->enum('status', ['ativo', 'inativo']);
             $table->date('reported_at')->nullable();
             $table->string('report_description')->nullable();

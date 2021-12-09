@@ -24,14 +24,16 @@ formCreateVaga.addEventListener('submit', function(event) {
 
     event.preventDefault();
 
-    const {titulo, descricao, start_date, expire_date } = formCreateVaga;
+    const {titulo, descricao, start_date, expire_date, job_type } = formCreateVaga;
 
     const formData = {
         titulo: titulo.value, 
         descricao: descricao.value, 
         dt_abertura: start_date.value, 
         dt_fechamento: expire_date.value,
-        habilidades: abilities
+        habilidades: abilities,
+        tipo_vaga: job_type
+
     }
 
     $.ajax({
