@@ -40,8 +40,8 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                              <label for="cpf">CPF</label>
-                              <input type="text" class="form-control" name="cpf" id="cpf" placeholder="Informe seu CPF" required>
+                              <label for="cpf_cnpj">CPF</label>
+                              <input type="text" class="form-control" name="cpf_cnpj" id="cpf_cnpj" placeholder="Informe seu CPF" required>
                             </div>
                         </div>
                         <div class="col-md-3">

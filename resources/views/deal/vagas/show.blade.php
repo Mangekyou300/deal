@@ -7,7 +7,7 @@
 
         <div class="main">
             <div class="titulo_vaga_de_emprego">
-                <h3>Título da vaga</h3>
+                <h3>{{ $vaga->titulo }}</h3>
             </div>
             <div class="info_vagas_de_emprego">
                 <div class="icon_vaga_de_emprego">
@@ -15,10 +15,10 @@
                 </div>
                 <div class="edit_vagas_de_emprego">
                     <ul>
-                    <li><span><b>Contratante:</b>Nome do Contratante</span></li>
-                    <li><span><b>Endereço:</b>Endereço do local</span></li>
-                    <li><span><b>Tipo de Serviço: </b><span class="job_type">Tipo de trabalho</span></span></li>
-                    <li><span><b>Data Final de Candidatura:</b>DD/MM/AAAA</span></li>
+                    <li><span><b>Contratante:</b> {{ $vaga->contratante->name }}</span></li>
+                    <li><span><b>Endereço:</b> Endereço do local</span></li>
+                    <li><span><b>Tipo de Trabalho: </b><span class="job_type"> {{ $vaga->tipo_vaga }}</span></li>
+                    <li><span><b>Data Final de Candidatura: </b> {{ Carbon\Carbon::parse($vaga->dt_fechamento)->format('d/m/Y') }}</span></li>
                     </ul>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                 <h3>Descrição da Vaga</h3>
             </div>
             <div class="txt_vaga_de_emprego subitens_vaga_de_emprego">
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aperiam eligendi, itaque vero aliquam officiis pariatur saepe laudantium quo harum rerum expedita est alias iusto illo dolor! Rerum vero obcaecati maiores repellendus, placeat totam reprehenderit a. Non rerum tenetur explicabo cupiditate, dicta earum aliquam suscipit sit.</span>
+                <span>{{ $vaga->descricao }}</span>
             </div>
             <div class="between"></div>
             <div class="titulo_vaga_de_emprego">
@@ -34,24 +34,15 @@
             </div>
             <div class="requisitos_vaga_de_emprego subitens_vaga_de_emprego">
                 <ul>
-                    <li><span class="mr-1 direction_color_custom"><i class="fas fa-angle-double-right"></i></span>Habilidade 1</li>
-                    <li><span class="mr-1 direction_color_custom"><i class="fas fa-angle-double-right"></i></span>Habilidade 2</li>
-                    <li><span class="mr-1 direction_color_custom"><i class="fas fa-angle-double-right"></i></span>Habilidade 3</li>
+                    @foreach ($vaga->habilidades as $habilidade)
+                            <li><span class="mr-1 direction_color_custom"><i class="fas fa-angle-double-right"></i></span>{{ $habilidade->nome }}</li>
+                    @endforeach
                 </ul>
             </div>
             <div class="between"></div>
-            <div class="titulo_vaga_de_emprego">
-                <h3>Palavras Chave</h3>
-            </div>
-            <div class="key_word_vaga_de_emprego">
-                <ul>
-                    <li class="key_vaga_de_emprego">Palavra Chave</li>
-                    <li class="key_vaga_de_emprego">Palavra Chave</li>
-                    <li class="key_vaga_de_emprego">Palavra Chave</li>
-                </ul>
-            </div>
+            
             <div class="bt_baga_de_emprego">
-                <button class="cadastrar"><i class="fas fa-file-upload"></i>Cadastrar</button>
+                <button class="cadastrar"><i class="fas fa-file-upload"></i>Candidatar-se</button>
                 <button class="reportar"><i class="fas fa-exclamation-circle"></i>Reportar</button>
             </div>
             

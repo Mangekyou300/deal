@@ -8,7 +8,6 @@ const abilities = [];
 // iniciando a data de início com a data atual
 inputDtAbertura.value = new Date().toISOString().slice(0, 10);
 
-
 btnAddAbility.addEventListener('click', function(event) {
 
     event.preventDefault();
@@ -42,7 +41,7 @@ formCreateVaga.addEventListener('submit', function(event) {
         dataType: "json",
         success: function (data) {
 
-            window.location.href = `/vagas/${data.id}`;
+            window.location.href = `/vagas/show/${data.id}`;
         },
         error: function(data) {
 
@@ -50,18 +49,7 @@ formCreateVaga.addEventListener('submit', function(event) {
 
             cleanValidationFields();
 
-            for (const field in errors) {
-            // console.log(prop + " = " + errors[prop]);
-                const element = $(`#${field}`)
-                const parent = element.parent();
-                parent.append(`
-                    <small id="invalid-feedback-${field}" class="invalid-feedback">
-                        ${errors[field]}
-                    </smal>
-                `);
-
-                element.addClass('is-invalid');
-            }
+            showErrorMessages(errors);
         }
     });
 });
@@ -83,6 +71,7 @@ function addAbilityToArray() {
 }
 
 function removeAbility(index) {
+
     abilities.splice(index, 1);
     reloadUlAbilities();
 }
@@ -117,4 +106,20 @@ function cleanValidationFields() {
 
     fields.forEach(field => field.classList.remove('is-invalid'));
     errorMessages.forEach(errorMessage => errorMessage.remove());
+}
+
+function showErrorMessages(errors) {
+
+    for (const field in errors) {
+        // console.log(prop + " = " + errors[prop]);
+            const element = $(`#${field}`)
+            const parent = element.parent();
+            parent.append(`
+                <small id="invalid-feedback-${field}" class="invalid-feedback">
+                    ${errors[field]}
+                </smal>
+            `);
+
+            element.addClass('is-invalid');
+        }
 }

@@ -26,7 +26,7 @@ class VagasController extends Controller
 
     public function show(Vaga $vaga = null)
     {
-        return view('deal.vagas.show');
+        return view('deal.vagas.show', compact('vaga'));
     }
 
     public function store(StoreVagaRequest $request)

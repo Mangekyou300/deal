@@ -27,7 +27,7 @@ Route::middleware('auth')->group(function() {
 
         Route::get('create', [PerfilController::class, 'create'])->name('perfil.create');
         Route::get('show/{perfil}', [PerfilController::class, 'show'])->name('perfil.show');
-        Route::post('storeProfessional', [PerfilController::class, 'storeProfessional'])->name('perfil.storeProfessional');
+        Route::post('store', [PerfilController::class, 'store'])->name('perfil.store');
     });
 
     Route::prefix('vagas')->group(function() {

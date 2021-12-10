@@ -23,3 +23,14 @@ Essa atualização foi 100% focada no perfil do usuário, portanto agora o siste
 
 - Retornar a página de criação de perfil correta, com base no tipo do usuário
 - Retornar a página de visualização de perfil correta, com base no tipo do usuário
+
+
+## Atualizações 10/12/2021
+
+Essa atualização foi dirigida a criação das validações e na finalização do cadastro do perfil do usuário.
+
+# IMPORTANTE
+
+- É necessário roda o comando "php artisan migrate" novamente na máquina, pois foi inserido um campo nomeado "pf_pj",
+para que seja possível identificar o tipo de perfil que acabou de ser criado. 
+

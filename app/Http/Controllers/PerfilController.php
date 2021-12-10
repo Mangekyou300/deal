@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StorePerfilRequest;
 use App\Perfil;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,7 +26,7 @@ class PerfilController extends Controller
                 break;
 
             default:
-                echo '<h1> Não existe tipo de perfil para este id </h1>';
+                echo '<h1> Um administrador precisa criar um perfil </h1>';
                 break;
         }
     }
@@ -51,8 +52,12 @@ class PerfilController extends Controller
         }
     }
 
-    public function storeProfessional(Request $request)
+    public function store(StorePerfilRequest $request)
     {
-        #code
+        // if($request->hasFile('avatar') && $request->file('avatar')->isValid()) {
+
+        //     $name = 'avatar_' . $request->cpf_cpnj;
+        //     $extension = $request->avatar->extension();
+        // }
     }
 }
