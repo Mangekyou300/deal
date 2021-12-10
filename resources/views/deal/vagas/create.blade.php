@@ -14,7 +14,7 @@
                             <i class="fas fa-gavel"></i>
                         </div>
                         <div class="btn-avatar-group">
-                            <h4>Vaga de {{ Auth::user()->name }}</h4>
+                            <h4>{{ Auth::user()->name }} - Nova Vaga</h4>
                             <p></p>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
                             <div class="form-group">
                                 <label for="titulo">Título da vaga</label>
                                 <input type="text" class="form-control form-control-sm" name="titulo" id="titulo"
-                                    placeholder="" required>
+                                    placeholder="" >
                             </div>
                         </div>
                     </div>
@@ -35,8 +35,8 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="descricao">Descrição</label>
-                                <textarea class="form-control" name="descricao" id="descricao" rows="2" required></textarea>
-                                <small class="form-text text-muted">Ajude às pessoas a entender melhor sobre a sua
+                                <textarea class="form-control" name="descricao" id="descricao" rows="2" ></textarea>
+                                <small class="form-text text-muted">Ajude às pessoas entenderem melhor sobre a sua
                                     demanda!</small>
                             </div>
                         </div>
@@ -71,46 +71,42 @@
                     <div class="between"></div>
 
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="form-group">
                                 <div class="startDate">
-                                    <label for="start_date">Data de inicio</label>
-                                    <input type="date" class="form-control" id="start_date" name="start_date" value="" required>
+                                    <label for="dt_abertura">Data de inicio</label>
+                                    <input type="date" class="form-control" id="dt_abertura" name="dt_abertura" value="" >
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="form-group">
                                 <div class="date">
-                                    <label for="expire_date">Data limite</label>
-                                    <input type="date" class="form-control" id="expire_date" name="expire_date" required>
+                                    <label for="dt_fechamento">Data limite</label>
+                                    <input type="date" class="form-control" id="dt_fechamento" name="dt_fechamento" >
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <h3 class="subtitle mb-0 mt-4">Qual tipo de emprego está oferencendo?</h3>
 
                     <div class="between"></div>
 
                     <div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio"  class="form-check-input" id="job_type" class="fixed_employment" name="job_type" value="1">
-                                        Emprego Fixo
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" id="job_type" class="freelance" name="job_type" value="2">  
-                                    Freelance
+                        <div class="col-md-12">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tipo_vaga" id="emprego_fixo" value="emprego_fixo" checked>
+                                <label class="form-check-label" for="emprego_fixo">
+                                  Emprego fixo
                                 </label>
-                            </div>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tipo_vaga" id="freelance" value="freelance">
+                                <label class="form-check-label" for="freelance">
+                                  Freelance
+                                </label>
+                              </div>
                         </div>
                     </div>
 
@@ -119,8 +115,6 @@
             </div>
         </div>
     </div>
-
-    
 
 @endsection
 

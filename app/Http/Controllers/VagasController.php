@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Vaga;
 use App\Habilidade;
 use App\HabilidadeVaga;
+use App\Http\Requests\StoreVagaRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -13,7 +14,7 @@ class VagasController extends Controller
 {
     // ''
 
-    public function index() 
+    public function index()
     {
         return view('deal.vagas.index');
     }
@@ -23,22 +24,26 @@ class VagasController extends Controller
         return view('deal.vagas.create');
     }
 
-    public function show(Vaga $vaga = null) 
+    public function show(Vaga $vaga = null)
     {
         return view('deal.vagas.show');
     }
 
-    public function store(Request $request) 
+    public function store(StoreVagaRequest $request)
     {
+
+        dd($request->all());
+
         try {
 
             DB::beginTransaction();
-            
+
             // criando a vaga
             $vaga = Vaga::create([
                 'user_post_id'  => Auth::user()->id,
                 'titulo'        => $request->titulo,
                 'descricao'     => $request->descricao,
+                'tipo_vaga'     => $request->tipo_vaga,
                 'dt_abertura'   => $request->dt_abertura,
                 'dt_fechamento' => $request->dt_fechamento
             ]);
@@ -53,10 +58,12 @@ class VagasController extends Controller
                     'vaga_id'       => $vaga->id
                 ]);
             }
-            
+
             DB::commit();
 
-            return response()->json(['success' => 'Vaga criada com sucesso!']);
+            $request->session()->flash('sucesso!', 'Vaga criada com sucesso!');
+
+            return response()->json(['id' => $vaga->id]);
 
         } catch (\Throwable $th) {
 

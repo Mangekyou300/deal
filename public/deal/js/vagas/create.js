@@ -2,19 +2,17 @@ const btnAddAbility = document.getElementById('add_ability');
 const ulAbilities = document.getElementById('abilities');
 const inputHabilidades = document.getElementById('habilidades');
 const formCreateVaga = document.getElementById('form_create_vaga');
+const inputDtAbertura = document.getElementById('dt_abertura');
 const abilities = [];
-const dt_inicio = document.getElementById('start_date');
 
+// iniciando a data de início com a data atual
+inputDtAbertura.value = new Date().toISOString().slice(0, 10);
 
-const n =  new Date();
-const y = n.getFullYear();
-const m = n.getMonth() + 1;
-const d = n.getDate();
 
 btnAddAbility.addEventListener('click', function(event) {
 
     event.preventDefault();
-    
+
     addAbilityToArray();
 
     reloadUlAbilities();
@@ -24,15 +22,15 @@ formCreateVaga.addEventListener('submit', function(event) {
 
     event.preventDefault();
 
-    const {titulo, descricao, start_date, expire_date, job_type } = formCreateVaga;
+    const {titulo, descricao, dt_abertura, dt_fechamento, tipo_vaga } = formCreateVaga;
 
     const formData = {
-        titulo: titulo.value, 
-        descricao: descricao.value, 
-        dt_abertura: start_date.value, 
-        dt_fechamento: expire_date.value,
+        titulo: titulo.value,
+        descricao: descricao.value,
+        dt_abertura: dt_abertura.value,
+        dt_fechamento: dt_fechamento.value,
         habilidades: abilities,
-        tipo_vaga: job_type
+        tipo_vaga: tipo_vaga.value
 
     }
 
@@ -42,20 +40,49 @@ formCreateVaga.addEventListener('submit', function(event) {
         url: "/vagas/store",
         data: formData,
         dataType: "json",
-        success: function (response) {
-            console.log(response)
+        success: function (data) {
+
+            window.location.href = `/vagas/${data.id}`;
+        },
+        error: function(data) {
+
+            const { errors } = data.responseJSON;
+
+            cleanValidationFields();
+
+            for (const field in errors) {
+            // console.log(prop + " = " + errors[prop]);
+                const element = $(`#${field}`)
+                const parent = element.parent();
+                parent.append(`
+                    <small id="invalid-feedback-${field}" class="invalid-feedback">
+                        ${errors[field]}
+                    </smal>
+                `);
+
+                element.addClass('is-invalid');
+            }
         }
     });
+});
 
+inputHabilidades.addEventListener('input', function(event){
+
+    if(event.target.value.length >= 3 ){
+    btnAddAbility.disabled = false;
+
+    }else{
+        btnAddAbility.disabled = true;
+    }
 });
 
 function addAbilityToArray() {
-    
+
     const { value } = inputHabilidades;
     abilities.push(value);
 }
 
-function removeAbility(index){
+function removeAbility(index) {
     abilities.splice(index, 1);
     reloadUlAbilities();
 }
@@ -63,7 +90,7 @@ function removeAbility(index){
 function reloadUlAbilities() {
 
     ulAbilities.innerHTML = '';
-    
+
     if(abilities.length > 0) {
 
         abilities.forEach((e, i) => {
@@ -80,25 +107,14 @@ function reloadUlAbilities() {
             ulAbilities.appendChild(li);
         })
     }
-    
+
 }
 
-dt_inicio.value = formatDate(`${y}-${m}-${d}`); 
+function cleanValidationFields() {
 
+    const fields = document.querySelectorAll('.is-invalid');
+    const errorMessages = document.querySelectorAll('.invalid-feedback');
 
-function formatDate(date){
-    let [y,m,d] = date.split('-');
-    m = String(m).length != 2 ? `0${m}` : String(m);
-    d = String(d).length != 2 ? `0${d}` : String(d);
-    return `${y}-${m}-${d}`;
+    fields.forEach(field => field.classList.remove('is-invalid'));
+    errorMessages.forEach(errorMessage => errorMessage.remove());
 }
-
-inputHabilidades.addEventListener('input', function(event){
-
-    if(event.target.value.length >= 3 ){
-    btnAddAbility.disabled = false;
-        
-    }else{
-        btnAddAbility.disabled = true;
-    }
-});
