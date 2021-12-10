@@ -8,7 +8,7 @@
 
         <div class="card default-radius">
             <div class="card-body">
-                <form action="{{ route('perfil.store') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('perfil.store') }}" method="post" enctype="multipart/form-data" name="create_perfil_contratante">
                     @csrf
                     <h3 class="subtitle mb-0 text-center">{{ auth()->user()->name }}</h3>
                     <div class="perfil-photo-container">
@@ -22,6 +22,23 @@
 
                             <button class="btn-remove-avatar">Remover imagem</button>
                         </div>
+                    </div>
+
+                    <div class="row my-5">
+                      <div class="col-md-12">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="pf_pj" id="pf" value="pf" checked>
+                          <label class="form-check-label" for="pf">
+                            Pessoa Física
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="pf_pj" id="pj" value="pj">
+                          <label class="form-check-label" for="pj">
+                            Pessoa Jurídica
+                          </label>
+                        </div>
+                      </div>
                     </div>
 
                     <h3 class="subtitle mb-0">Queremos saber mais sobre você</h3>
@@ -121,4 +138,8 @@
         </div>
     </div>
 
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('deal/js/perfil/create.js') }}"></script>
 @endsection
