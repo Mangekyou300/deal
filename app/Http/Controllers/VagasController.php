@@ -31,9 +31,6 @@ class VagasController extends Controller
 
     public function store(StoreVagaRequest $request)
     {
-
-        dd($request->all());
-
         try {
 
             DB::beginTransaction();
