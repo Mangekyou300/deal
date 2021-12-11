@@ -17,7 +17,7 @@
                         </div>
                         <div class="btn-avatar-group">
                             <label class="btn-input-avatar" for="avatar">Adicionar imagem</label>
-                            <input type="file" name="avatar" id="avatar" placeholder="Adicione sua foto ao seu perfil"
+                            <input type="file" name="avatar" id="avatar" placeholder="Adicione uma foto ao seu perfil"
                                 aria-describedby="avatar">
 
                             <button class="btn-remove-avatar">Remover imagem</button>
@@ -45,11 +45,20 @@
 
                     <div class="between"></div>
 
+                    <div class="row d-none" id="row_nome_fantasia">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="nome_fantasia">Nome fantasia</label>
+                          <input type="text" class="form-control" name="nome_fantasia" id="nome_fantasia" placeholder="Insira o nome fantasia da organização." value="{{ auth()->user()->name }}">
+                        </div>
+                      </div>
+                    </div>
+
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="sobre_mim">Sobre mim</label>
-                                <textarea class="form-control" name="sobre_mim" id="sobre_mim" rows="2"></textarea>
+                                <textarea class="form-control" name="sobre_mim" id="sobre_mim" rows="5"></textarea>
                                 <small class="form-text text-muted">Ajude às pessoas a te conhcerem melhor!</small>
                             </div>
                         </div>
@@ -60,7 +69,7 @@
                             <div class="form-group">
                                 <label for="cpf_cnpj">CPF</label>
                                 <input type="text" class="form-control" name="cpf_cnpj" id="cpf_cnpj"
-                                    placeholder="Informe seu CPF" required>
+                                    placeholder="Informe o CPF" required>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -93,7 +102,7 @@
                         <div class="col-md-2">
                             <div class="form-group">
                                 <label for="cep">CEP</label>
-                                <input type="text" class="form-control" name="cep" id="cep" placeholder="Informe seu CEP"
+                                <input type="text" class="form-control" name="cep" id="cep" placeholder="Informe o CEP"
                                     required>
                             </div>
                         </div>
@@ -122,7 +131,7 @@
                             <div class="form-group">
                                 <label for="cidade">Cidade</label>
                                 <input type="text" class="form-control" name="cidade" id="cidade"
-                                    placeholder="Informe a sua cidade" required>
+                                    placeholder="Informe a cidade" required>
                             </div>
                         </div>
                         <div class="col-md-1">
