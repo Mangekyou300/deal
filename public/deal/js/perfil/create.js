@@ -1,26 +1,17 @@
 const formCreatePerfilContratante = document.forms.create_perfil_contratante;
+
+const { pf_pj: radioPfPj,
+        sobre_mim: inputSobreMim, 
+        nome_fantasia: inputNomeFantasia,
+        cpf_cnpj: inputCpfCnpj } = formCreatePerfilContratante;
+
 const divRowNomeFantasia = document.getElementById('row_nome_fantasia');
-
-const { 
-    pf_pj: radioPfPj,
-    sobre_mim: inputSobreMim, 
-    nome_fantasia: inputNomeFantasia,
-    cpf_cnpj: inputCpfCnpj
-
-} = formCreatePerfilContratante;
 
 const nomeFantasiaPf = inputNomeFantasia.value;
 
-formCreatePerfilContratante.pf_pj.forEach( e => {
+radioPfPj.forEach( e => e.onchange = () => handleFormChanges(radioPfPj.value) );
 
-    e.onchange = () => handleFormChanges(radioPfPj.value);
-
-});
-
-function handleFormChanges(perfil) {
-    
-    if(perfil === 'pf') formChangePF(); else formChangePJ() 
-}
+const handleFormChanges = perfil => perfil === 'pf' ? formChangePF() : formChangePJ();
 
 function formChangePF() {
 
