@@ -54,7 +54,7 @@ class PerfilController extends Controller
 
     public function store(StorePerfilRequest $request)
     {
-        dd($request);
+        dd($request->all());
         // if($request->hasFile('avatar') && $request->file('avatar')->isValid()) {
 
         //     $name = 'avatar_' . $request->cpf_cpnj;

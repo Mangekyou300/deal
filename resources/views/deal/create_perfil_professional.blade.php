@@ -8,7 +8,7 @@
 
         <div class="card default-radius">
             <div class="card-body">
-                <form action="{{ route('perfil.storeProfessional') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('perfil.store') }}" method="post" enctype="multipart/form-data" id="form_create">
                     @csrf
                     <h3 class="subtitle mb-0 text-center">{{ auth()->user()->name }}</h3>
                     <div class="perfil-photo-container">
@@ -99,6 +99,12 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
+                              <label for="bairro">Bairro</label>
+                              <input type="text" class="form-control" name="bairro" id="bairro">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
                               <label for="cidade">Cidade</label>
                               <input type="text" class="form-control" name="cidade" id="cidade" placeholder="Informe a sua cidade" required>
                             </div>
@@ -116,4 +122,9 @@
         </div>
     </div>
 
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('deal/js/features/autofillAdress.js') }}"></script>
+    <script src="{{ asset('deal/js/features/masks.js') }}"></script>
 @endsection

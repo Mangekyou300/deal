@@ -1,9 +1,10 @@
 const formCreatePerfilContratante = document.forms.create_perfil_contratante;
 
 const { pf_pj: radioPfPj,
-        sobre_mim: inputSobreMim, 
+        sobre_mim: inputSobreMim,
         nome_fantasia: inputNomeFantasia,
-        cpf_cnpj: inputCpfCnpj } = formCreatePerfilContratante;
+        cpf_cnpj: inputCpfCnpj,
+        dt_nascimento: inputDtNascimento } = formCreatePerfilContratante;
 
 const divRowNomeFantasia = document.getElementById('row_nome_fantasia');
 
@@ -26,6 +27,9 @@ function formChangePF() {
     // mudar label de cnpj para cpf (alterar o placeholder)
     inputCpfCnpj.placeholder = 'Informe o CPF';
     inputCpfCnpj.labels[0].textContent = 'CPF';
+
+    // mudar label de "data de criação da empresa" para "data de nascimento"
+    inputDtNascimento.labels[0].textContent = "Data de nascimento";
 }
 
 function formChangePJ() {
@@ -44,4 +48,8 @@ function formChangePJ() {
     // mudar label de cpf para cnpj (alterar o placeholder)
     inputCpfCnpj.placeholder = 'Informe o CNPJ';
     inputCpfCnpj.labels[0].textContent = 'CNPJ';
+
+    // mudar o label de "data de nascimento" para "data de criação da empresa"
+    inputDtNascimento.labels[0].textContent = "Criação da empresa";
+
 }
