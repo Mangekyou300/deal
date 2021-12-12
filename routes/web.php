@@ -26,7 +26,7 @@ Route::middleware('auth')->group(function() {
     Route::prefix('perfil')->group(function() {
 
         Route::get('create', [PerfilController::class, 'create'])->name('perfil.create');
-        Route::get('show/{perfil}', [PerfilController::class, 'show'])->name('perfil.show');
+        Route::get('show/{perfil?}', [PerfilController::class, 'show'])->name('perfil.show');
         Route::post('store', [PerfilController::class, 'store'])->name('perfil.store');
     });
 
@@ -43,5 +43,5 @@ Route::middleware('auth')->group(function() {
         Route::get('/', [CandidaturasController::class, 'index'])->name('candidaturas');
     });
 
-   
+
 });

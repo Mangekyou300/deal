@@ -25,17 +25,12 @@ class StorePerfilRequest extends FormRequest
     {
         return [
             'pf_pj'         => 'required',
-            'avatar'        => 'nullable',
             'nome_fantasia' => 'required',
             'cpf_cnpj'      => 'required|min:10|max:18',
             'dt_nascimento' => 'required|date',
-            'telefone'      => 'nullable',
-            'telefone2'     => 'nullable',
-            'sobre_mim'     => 'nullable',
             'cep'           => 'required|min:8|max:10',
             'logradouro'    => 'required',
             'numero'        => 'required',
-            'complemento'   => 'nullable',
             'bairro'        => 'required',
             'cidade'        => 'required',
             'uf'            => 'required'

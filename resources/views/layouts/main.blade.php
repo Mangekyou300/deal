@@ -39,6 +39,9 @@
     {{-- jquery --}}
     <script src="{{ asset('deal/js/jquery-3.6.0.min.js') }}"></script>
 
+    {{-- auto validation --}}
+    <script src="{{ asset('deal/js/features/Validation.js') }}"></script>
+
     {{-- owl-carousel --}}
     <script src="{{ asset('deal/js/owl.carousel.min.js') }}"></script>
 

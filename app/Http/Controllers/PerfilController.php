@@ -17,12 +17,12 @@ class PerfilController extends Controller
         switch ($tipo) {
             case 2:
 
-                return view('deal.perfil_professional', compact('perfil'));
+                return view('deal.perfil.perfil_professional', compact('perfil'));
                 break;
 
             case 3:
 
-                return view('deal.new_perfil_contractor', compact('perfil'));
+                return view('deal.perfil.perfil_contractor', compact('perfil'));
                 break;
 
             default:
@@ -33,21 +33,18 @@ class PerfilController extends Controller
 
     public function create()
     {
-        $tipo = Auth::user()->tipo_usuario_id;
+        $user = Auth::user();
 
-        switch ($tipo) {
+        switch ($user->tipo_usuario_id) {
+
             case 2:
-
-                return view('deal.create_perfil_professional');
-                break;
-
             case 3:
 
-                return view('deal.create_perfil_contractor');
+                return view('deal.perfil.create', compact('user'));
                 break;
 
             default:
-                echo '<h1> Não existe tipo de perfil para este id </h1>';
+                echo '<h1> Não existe tipo de perfil para este Usuários Administradores </h1>';
                 break;
         }
     }

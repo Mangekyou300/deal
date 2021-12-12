@@ -96,7 +96,6 @@ function reloadUlAbilities() {
             ulAbilities.appendChild(li);
         })
     }
-
 }
 
 function cleanValidationFields() {

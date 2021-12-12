@@ -66,18 +66,18 @@
                     <div class="col-md-12">
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="tipo_usuario_id" id="tipo_usuario_id_profissional" value="2" checked>
+                                <input type="radio" class="form-check-input" name="tipo_usuario_id" id="tipo_usuario_id_profissional" value="3" checked>
                                 Profissional
                           </label>
                         </div>
 
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="tipo_usuario_id" id="tipo_usuario_id_contratante" value="3">
+                                <input type="radio" class="form-check-input" name="tipo_usuario_id" id="tipo_usuario_id_contratante" value="2">
                                 Contratante
                             </label>
                         </div>
-                        
+
                     </div>
                 </div>
 
@@ -90,7 +90,7 @@
                             {{ __('Cadastrar') }}
                         </button>
                     </div>
-                   
+
                 </div>
             </form>
         </div>

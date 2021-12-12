@@ -1,55 +1,60 @@
-const formCreatePerfilContratante = document.forms.create_perfil_contratante;
+const formCreatePerfil = document.forms.namedItem('form_create_perfil')
+const {
+    avatar: inputAvatar,
+    nome_fantasia: inputNomeFantasia,
+    cpf_cnpj: inputCpfCnpj,
+    dt_nascimento: inputDtNascimento,
+    telefone: inputTelefone,
+    telefone2: inputTelefone2,
+    cep: inputCep,
+    logradouro: inputLogradouro,
+    numero: inputNumero,
+    complemento: inputComplemento,
+    bairro: inputBairro,
+    cidade: inputCidade,
+    sobre_mim: inputSobreMim,
+    uf: inputUf } = formCreatePerfil;
 
-const { pf_pj: radioPfPj,
-        sobre_mim: inputSobreMim,
-        nome_fantasia: inputNomeFantasia,
-        cpf_cnpj: inputCpfCnpj,
-        dt_nascimento: inputDtNascimento } = formCreatePerfilContratante;
+formCreatePerfil.addEventListener('submit', function(event) {
 
-const divRowNomeFantasia = document.getElementById('row_nome_fantasia');
+    event.preventDefault();
 
-const nomeFantasiaPf = inputNomeFantasia.value;
+    const formData = {
+        avatar: inputAvatar.value,
+        nome_fantasia: inputNomeFantasia.value,
+        cpf_cnpj: inputCpfCnpj.value,
+        dt_nascimento: inputDtNascimento.value,
+        telefone: inputTelefone.value,
+        telefone2: inputTelefone2.value,
+        cep: inputCep.value,
+        logradouro: inputLogradouro.value,
+        numero: inputNumero.value,
+        complemento: inputComplemento.value,
+        bairro: inputBairro.value,
+        cidade: inputCidade.value,
+        sobre_mim: inputSobreMim.value,
+        uf: inputUf.value
+    }
 
-radioPfPj.forEach( e => e.onchange = () => handleFormChanges(radioPfPj.value) );
+    $.ajax({
+        headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+        type: "post",
+        url: "/perfil/store",
+        data: formData,
+        dataType: "json",
+        success: function (data) {
 
-const handleFormChanges = perfil => perfil === 'pf' ? formChangePF() : formChangePJ();
+            window.location.href = `/perfil/show/${data.id}`;
+        },
+        error: function(data) {
 
-function formChangePF() {
+            const { errors } = data.responseJSON;
 
-    // esconder o input "nome fantasia"
-    divRowNomeFantasia.classList.add('d-none');
-    inputNomeFantasia.value = nomeFantasiaPf;
+            const validation = new Validation(errors);
 
-    // mudar de sobre a empresa para sobre mim
-    inputSobreMim.labels[0].textContent = 'Sobre mim';
-    inputSobreMim.nextElementSibling.textContent = 'Ajude às pessoas a te conhcerem melhor!';
+            validation.cleanValidationFields();
 
-    // mudar label de cnpj para cpf (alterar o placeholder)
-    inputCpfCnpj.placeholder = 'Informe o CPF';
-    inputCpfCnpj.labels[0].textContent = 'CPF';
-
-    // mudar label de "data de criação da empresa" para "data de nascimento"
-    inputDtNascimento.labels[0].textContent = "Data de nascimento";
-}
-
-function formChangePJ() {
-
-    // exibir o input "nome fantasia"
-    divRowNomeFantasia.classList.remove('d-none');
-
-    // exibir o input "nome fantasia"
-    inputNomeFantasia.value = "";
-    inputNomeFantasia.placeholder = "Insira o nome fantasia da organização.";
-
-    // mudar de sobre mim para sobre a empresa
-    inputSobreMim.labels[0].textContent = 'Sobre a Empresa';
-    inputSobreMim.nextElementSibling.textContent = 'Ajude as pessoas a conhecerem melhor sua Organização.';
-
-    // mudar label de cpf para cnpj (alterar o placeholder)
-    inputCpfCnpj.placeholder = 'Informe o CNPJ';
-    inputCpfCnpj.labels[0].textContent = 'CNPJ';
-
-    // mudar o label de "data de nascimento" para "data de criação da empresa"
-    inputDtNascimento.labels[0].textContent = "Criação da empresa";
-
-}
+            validation.showErrorMessages();
+        }
+    });
+});
