@@ -1,3 +1,4 @@
+const photoContainer = document.querySelector('.photo-container');
 const formCreatePerfil = document.forms.namedItem('form_create_perfil')
 const {
     avatar: inputAvatar,
@@ -58,3 +59,41 @@ formCreatePerfil.addEventListener('submit', function(event) {
         }
     });
 });
+
+// script para lidar com a imagem
+inputAvatar.onchange = async event => {
+
+    if(!inputAvatar.value) {
+
+        inputAvatar.innerHTML = `<i class="far fa-user"></i>`;
+        return;
+    } 
+
+    event.preventDefault();
+
+    photoContainer.innerHTML = `<i class="far fa-spinner load"></i>`;
+
+    const file = inputAvatar.files[0];
+    const fileReader = new FileReader();
+
+    await loadImage(file, fileReader);
+    
+}
+
+document.querySelector('.btn-remove-avatar').onclick = event => {
+
+    event.preventDefault();
+    inputAvatar.value = ""
+    photoContainer.innerHTML = `<i class="far fa-user"></i>`;
+} 
+
+async function loadImage(file, fileReader) {
+
+    fileReader.onload = function() {
+        const img = document.createElement('img');
+        img.src = fileReader.result;
+        photoContainer.children[0].classList.add('d-none');
+        photoContainer.appendChild(img);
+    };
+    fileReader.readAsDataURL(file);
+}

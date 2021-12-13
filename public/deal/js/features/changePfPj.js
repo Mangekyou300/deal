@@ -1,4 +1,4 @@
-const { pf_pj: radioPfPj} = formCreatePerfil;
+const { pf_pj: radioPfPj } = formCreatePerfil;
 
 const divRowNomeFantasia = document.getElementById('row_nome_fantasia');
 

@@ -348,6 +348,7 @@ nav .nav-container {
 .photo-container {
     background-color: lightgray;
     font-size: 3.6rem;
+    overflow: hidden;
     width: 110px;
     height: 110px;
     display: flex;
@@ -358,6 +359,13 @@ nav .nav-container {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    text-align: center;
 }
 
 .btn-avatar-group {
@@ -896,3 +904,19 @@ footer img {
 }
 
 /* end footer */
+
+/* animations */
+
+.load {
+    animation: rotating .2s linear infinite;
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
