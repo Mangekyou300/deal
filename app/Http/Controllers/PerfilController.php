@@ -44,7 +44,7 @@ class PerfilController extends Controller
                 break;
 
             default:
-                echo '<h1> Não existe tipo de perfil para este Usuários Administradores </h1>';
+                echo '<h1> Não existe tipo de perfil para Usuários Administradores </h1>';
                 break;
         }
     }
