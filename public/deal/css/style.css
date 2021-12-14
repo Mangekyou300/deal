@@ -81,8 +81,10 @@ nav .nav-container {
     width: 45px;
     height: 45px;
     border-radius: 50%;
+    border: none;
     overflow: hidden;
     background: #E4E4E4;
+    cursor: pointer;
 }
 
 .img_user img {
