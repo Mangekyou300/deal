@@ -11,7 +11,7 @@
         <div class="nav-container">
             <div class="icons">
                 <div class="img_user" id="on_click">
-                    @if (Storage::disk('public')->exists($perfil->avatar))
+                    @if ($perfil && Storage::disk('public')->exists($perfil->avatar))
                         <img src="{{ asset("storage/$perfil->avatar") }}" alt="Imagem de perfil" id="icon_perfil_user">
                     @else
                         <i class="far fa-user" id="icon_perfil_user"></i>
