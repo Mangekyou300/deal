@@ -8,9 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    {{-- <link rel="shortcut icon" href="{{ asset('deal/image/logos/favicon_branco_deal.ico') }}" type="image/x-icon" /> --}}
-
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+    {{-- toastr css --}}
+    <link rel="stylesheet" href="{{ asset('deal/css/features/jquery.toast.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('deal/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('deal/css/owl.theme.default.min.css') }}">
@@ -33,6 +34,13 @@
         </div>
 
         @include('layouts.footer')
+
+
+    {{-- jquery 1.1 --}}
+    <script src="{{ asset('deal/js/jquery-1.11.1.min.js') }}"></script>
+
+    {{-- toast --}}
+    <script src="{{ asset('deal/css/features/jquery.toast.min.css') }}"></script>
 
     <script src="{{ asset('js/app.js') }}"></script>
 
