@@ -10,7 +10,8 @@
                 <form action="{{ route('perfil.store') }}" method="post" enctype="multipart/form-data" id="form_create_perfil"
                     name="create_perfil">
                     @csrf
-                    <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+
+                    <input type="hidden" name="user_id" value="{{ $user->id }}">
                     <h3 class="subtitle mb-0 text-center">{{ auth()->user()->name }}</h3>
                     <div class="perfil-photo-container">
                         <div class="photo-container">
@@ -41,6 +42,8 @@
                                 </div>
                             </div>
                         </div>
+                    @else
+                        <input type="hidden" name="pf_pj" value="pf">
                     @endif
 
                     <h3 class="subtitle mb-0">Queremos saber mais sobre você</h3>

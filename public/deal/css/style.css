@@ -81,7 +81,14 @@ nav .nav-container {
     width: 45px;
     height: 45px;
     border-radius: 50%;
+    overflow: hidden;
     background: #E4E4E4;
+}
+
+.img_user img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .img_user i{

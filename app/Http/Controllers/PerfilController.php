@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePerfilRequest;
-use App\Perfil;
 use Illuminate\Support\Facades\Auth;
+use App\Perfil;
+use App\User;
+
 
 use Illuminate\Http\Request;
 
@@ -51,11 +53,26 @@ class PerfilController extends Controller
 
     public function store(StorePerfilRequest $request)
     {
-        dd($request->all());
-        // if($request->hasFile('avatar') && $request->file('avatar')->isValid()) {
+        $perfil = $request->except('avatar');
 
-        //     $name = 'avatar_' . $request->cpf_cpnj;
-        //     $extension = $request->avatar->extension();
-        // }
+        if($request->hasFile('avatar') && $request->file('avatar')->isValid()) {
+
+            $requestAvatar = $request->avatar;
+            $extension = $requestAvatar->extension();
+
+            // gerar uma hash com o nome do arquivo
+            $imageName = md5($requestAvatar->getClientOriginalName() . strtotime('now')) . '.' . $extension;
+
+            $path = $requestAvatar->storeAs('avatares', $imageName);
+
+            $perfil['avatar'] = $path;
+        }
+
+        Perfil::create($perfil);
+
+        return response()->json([
+            'success' => 'Perfil criado com sucesso', 
+            'type'    => User::find($perfil['user_id'])->tipo_usuario_id
+        ], 200);
     }
 }

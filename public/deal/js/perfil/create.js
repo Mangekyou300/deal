@@ -1,6 +1,8 @@
 const photoContainer = document.querySelector('.photo-container');
 const formCreatePerfil = document.forms.namedItem('form_create_perfil')
 const {
+    user_id: inputUserId,
+    pf_pj: inputPfPj,
     avatar: inputAvatar,
     nome_fantasia: inputNomeFantasia,
     cpf_cnpj: inputCpfCnpj,
@@ -15,13 +17,17 @@ const {
     cidade: inputCidade,
     sobre_mim: inputSobreMim,
     uf: inputUf } = formCreatePerfil;
+  
+
 
 formCreatePerfil.addEventListener('submit', function(event) {
 
     event.preventDefault();
 
     const formData = {
-        avatar: inputAvatar.value,
+        user_id: inputUserId.value,
+        pf_pj: inputPfPj.value,
+        avatar: inputAvatar.files[0],
         nome_fantasia: inputNomeFantasia.value,
         cpf_cnpj: inputCpfCnpj.value,
         dt_nascimento: inputDtNascimento.value,
@@ -37,15 +43,28 @@ formCreatePerfil.addEventListener('submit', function(event) {
         uf: inputUf.value
     }
 
+    const fd = new FormData();
+
+    for(formItem in formData) {
+
+        fd.append(formItem, formData[formItem]);
+    }
+
+    console.log(Array.from(fd));
+
     $.ajax({
         headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
         type: "post",
         url: "/perfil/store",
-        data: formData,
+        data: fd,
         dataType: "json",
+        contentType: false,
+        cache: false,
+        processData: false,
         success: function (data) {
 
-            window.location.href = `/perfil/show/${data.id}`;
+            console.log(data)
+            // window.location.href = `/perfil/show/${data.id}`;
         },
         error: function(data) {
 
@@ -96,4 +115,6 @@ async function loadImage(file, fileReader) {
         photoContainer.appendChild(img);
     };
     fileReader.readAsDataURL(file);
+
+    console.log(file, fileReader);
 }

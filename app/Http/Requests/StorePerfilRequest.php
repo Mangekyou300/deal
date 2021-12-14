@@ -24,7 +24,7 @@ class StorePerfilRequest extends FormRequest
     public function rules()
     {
         return [
-            'pf_pj'         => 'required',
+            'avatar'        => 'mimes:png,jpg,jpeg,bmp,gif,svg,webp|max:40960',
             'nome_fantasia' => 'required',
             'cpf_cnpj'      => 'required|min:10|max:18',
             'dt_nascimento' => 'required|date',

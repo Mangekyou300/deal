@@ -1,9 +1,21 @@
     {{-- Barra de navegação --}}
+
+    {{-- tenta localizar o perfil do usuário --}}
+    @php 
+        $perfil = auth()->user()->perfil()->first(); 
+
+    @endphp
+
+
     <nav>
         <div class="nav-container">
             <div class="icons">
                 <div class="img_user" id="on_click">
-                    <i class="far fa-user" id="icon_perfil_user"></i>
+                    @if (Storage::disk('public')->exists($perfil->avatar))
+                        <img src="{{ asset("storage/$perfil->avatar") }}" alt="Imagem de perfil">
+                    @else
+                        <i class="far fa-user" id="icon_perfil_user"></i>
+                    @endif
                 </div>
                 <div class="chat">
                     <a href="/">
@@ -19,9 +31,6 @@
             {{-- menu escondido --}}
             <div class="user_click hidden">
                 <div class="user_click_op">
-
-                    {{-- tenta localizar o perfil do usuário --}}
-                    @php $perfil = auth()->user()->perfil()->first(); @endphp
 
                     <a href="{{ $perfil ? route('perfil.show', $perfil->id) : route('perfil.create') }}"><i class="far fa-user"></i></i>Perfil</a>
                     <div class="op_between"></div>
