@@ -16,7 +16,7 @@
                 <div class="edit_vagas_de_emprego">
                     <ul>
                     <li><span><b>Contratante:</b> {{ $vaga->contratante->name }}</span></li>
-                    <li><span><b>Endereço:</b> Endereço do local</span></li>
+                    <li><span><b>Local:</b> {{ $vaga->contratante->perfil->cidade }}</span></li>
                     <li><span><b>Tipo de Trabalho: </b><span class="job_type"> {{ $vaga->tipo_vaga }}</span></li>
                     <li><span><b>Data Final de Candidatura: </b> {{ Carbon\Carbon::parse($vaga->dt_fechamento)->format('d/m/Y') }}</span></li>
                     </ul>
