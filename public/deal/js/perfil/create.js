@@ -63,8 +63,7 @@ formCreatePerfil.addEventListener('submit', function(event) {
         processData: false,
         success: function (data) {
 
-            console.log(data)
-            // window.location.href = `/perfil/show/${data.id}`;
+            window.location.href = `/perfil/show/${data.id}`;
         },
         error: function(data) {
 

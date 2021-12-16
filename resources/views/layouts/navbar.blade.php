@@ -3,9 +3,7 @@
     {{-- tenta localizar o perfil do usuário --}}
     @php 
         $perfil = auth()->user()->perfil()->first(); 
-
     @endphp
-
 
     <nav>
         <div class="nav-container">

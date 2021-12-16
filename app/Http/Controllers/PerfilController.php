@@ -68,11 +68,12 @@ class PerfilController extends Controller
             $perfil['avatar'] = $path;
         }
 
-        Perfil::create($perfil);
+        $newPerfil = Perfil::create($perfil);
 
         return response()->json([
             'success' => 'Perfil criado com sucesso', 
-            'type'    => User::find($perfil['user_id'])->tipo_usuario_id
+            'type'    => User::find($perfil['user_id'])->tipo_usuario_id,
+            'id'      => $newPerfil->id
         ], 200);
     }
 }
